@@ -1,17 +1,29 @@
-<h1>Articles</h1>
+<!DOCTYPE html>
+<html>
 
-<ul>
-    <% @articles.each do |article|%>
-    <li><%= article.title %>
-        <%= link_to article.title, article%>
-    </li>
-    <li><%= article.body %></li>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <% end %>
-</ul>
-</div>
-<div>
+</head>
 
-    <%= link_to "Create new Article", new_article_path %>
+<body>
+    <h1 class="text-lg text-yellow-500">Articles</h1>
 
-</div>
+    <ul>
+        <% @articles.each do |article|%>
+        <li><%= article.title %>
+            <%= link_to article.title, article%>
+        </li>
+        <li><%= article.body %></li>
+
+        <% end %>
+    </ul>
+    </div>
+    <div>
+
+        <%= link_to "Create new Article", new_article_path %>
+
+    </div>
+</body>
+
+</html>
